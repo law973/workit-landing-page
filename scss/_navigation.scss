@@ -1,0 +1,22 @@
+.navigation {
+    align-items: flex-end;
+    background-color: var(--purple-900);
+    display: flex;
+    height: 4.188rem;
+    justify-content: center;
+
+    .navigation__content {
+        display: flex;
+        justify-content: space-between;
+        width: clamp(20.938rem, 89.2vw, 42.5rem);
+    }
+
+    // Tablet Breakpoint
+    @media screen and (min-width: 768px) {
+        height: clamp(4.188rem, 8.6vw, 5.688rem);
+
+        .navigation__content {
+            width: clamp(42.5rem, 88.4vw, 70rem);
+        }
+    }
+}

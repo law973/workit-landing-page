@@ -1,0 +1,209 @@
+@font-face {
+  font-display: swap;
+  font-family: "Fraunces";
+  src: url("../assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Manrope";
+  src: url("../assets/fonts/manrope/Manrope-VariableFont_wght.ttf");
+}
+:root {
+  --green: #44FFA1;
+  --purple-100: #FCF8FF;
+  --purple-500: #584D62;
+  --purple-900: #24053E;
+  --slate-500: #584D62;
+  --slate-900: #0f172a;
+  --white: #fff;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.button__primary {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+  color: var(--slate-900);
+  cursor: pointer;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(1rem, 4vw, 1.125rem);
+  font-weight: 700;
+  padding: 12px 32px;
+  width: fit-content;
+}
+.button__primary:hover, .button__primary:focus {
+  background-color: var(--purple-900);
+  color: var(--green);
+}
+
+.button__secondary {
+  background-color: var(--purple-900);
+  border: none;
+  border-bottom: 3px solid var(--green);
+  color: var(--white);
+  cursor: pointer;
+  font-family: "Manrope", sans-serif;
+  font-size: 1.125rem;
+  font-weight: 700;
+  padding: 3px 1px 3px 0px;
+}
+.button__secondary:hover, .button__secondary:focus {
+  color: var(--green);
+}
+
+.navigation {
+  align-items: flex-end;
+  background-color: var(--purple-900);
+  display: flex;
+  height: 4.188rem;
+  justify-content: center;
+}
+.navigation .navigation__content {
+  display: flex;
+  justify-content: space-between;
+  width: clamp(20.938rem, 89.2vw, 42.5rem);
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    height: clamp(4.188rem, 8.6vw, 5.688rem);
+  }
+  .navigation .navigation__content {
+    width: clamp(42.5rem, 88.4vw, 70rem);
+  }
+}
+
+.hero__container {
+  background-color: var(--purple-900);
+  color: var(--white);
+}
+.hero__container .hero__text {
+  font-family: "Fraunces", sans-serif;
+  font-size: clamp(3rem, 12.7vw, 3.75rem);
+  font-weight: 600;
+  line-height: 100%;
+}
+.hero__container .hero__text span {
+  text-decoration: underline var(--green) solid 3px;
+}
+@media screen and (min-width: 768px) {
+  .hero__container .hero__text {
+    font-size: clamp(3.75rem, 7.7vw, 5rem);
+  }
+}
+
+ol li {
+  color: var(--slate-900);
+}
+ol li span {
+  font-family: "Fraunces", sans-serif;
+  font-size: clamp(1.5rem, 6.3vw, 1.75rem);
+  font-weight: 600;
+  line-height: 120%;
+}
+ol li p {
+  font-size: 1rem;
+  font-family: "Manrope", sans-serif;
+  line-height: 180%;
+}
+@media screen and (min-width: 768px) {
+  ol li span {
+    font-size: clamp(1.75rem, 3.5vw, 2rem);
+  }
+  ol li p {
+    font-size: clamp(1rem, 1.9vw, 1.125rem);
+  }
+}
+
+.card {
+  background-color: var(--purple-900);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: clamp(2rem, 8vw, 3rem);
+  text-align: center;
+}
+.card span {
+  font-size: clamp(2rem, 8.4vw, 3rem);
+  font-family: "Fraunces", sans-serif;
+  font-weight: 600;
+  line-height: 120%;
+}
+.card p {
+  font-size: 1rem;
+  font-family: "Manrope", sans-serif;
+  line-height: 180%;
+}
+@media screen and (min-width: 768px) {
+  .card {
+    padding: clamp(3rem, 6vw, 4rem);
+    text-align: left;
+  }
+  .card span {
+    font-size: clamp(3rem, 6.1vw, 3.5rem);
+  }
+  .card p {
+    font-size: clamp(1rem, 1.9vw, 1.125rem);
+  }
+}
+
+.footer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  height: clamp(16.288rem, 33vw, 20.288rem);
+  justify-content: center;
+}
+
+.footer__social {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.social_icon path {
+  fill: var(--slate-500);
+}
+.social_icon:hover path, .social_icon:focus path {
+  fill: var(--slate-900);
+}
+
+/*# sourceMappingURL=compiled_style.css.map */

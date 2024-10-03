@@ -1,0 +1,29 @@
+ol {
+    li {
+        color: var(--slate-900);
+
+        span {
+            font-family: $font-fraunces;
+            font-size: clamp(1.5rem, 6.3vw, 1.75rem);
+            font-weight: 600;
+            line-height: 120%;
+        }
+
+        p {
+            font-size: 1rem;
+            font-family: $font-manrope;
+            line-height: 180%;
+        }
+
+        // Tablet Breakpoint
+        @media screen and (min-width: 768px) {
+            span {
+                font-size: clamp(1.75rem, 3.5vw, 2rem);
+            }
+
+            p {
+                font-size: clamp(1rem, 1.9vw, 1.125rem);
+            }
+        }
+    }
+}

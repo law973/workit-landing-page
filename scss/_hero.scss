@@ -1,0 +1,19 @@
+.hero__container {
+    background-color: var(--purple-900);
+    color: var(--white);
+    .hero__text {
+        font-family: $font-fraunces;
+        font-size: clamp(3rem, 12.7vw, 3.75rem);
+        font-weight: 600;
+        line-height: 100%;
+
+        span {
+            text-decoration: underline var(--green) solid 3px;
+        }
+
+        // Tablet Breakpoint
+        @media screen and (min-width: 768px) {
+            font-size: clamp(3.75rem, 7.7vw, 5rem);
+        }
+    }
+}

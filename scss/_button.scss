@@ -1,20 +1,31 @@
 .button__primary {
     background-color: var(--green);
+    border: 1px solid var(--green);
     color: var(--slate-900);
     cursor: pointer;
+    font-family: $font-manrope;
     font-size: clamp(1rem, 4vw, 1.125rem);
+    font-weight: 700;
     padding: 12px 32px;
+    width: fit-content;
     // width: clamp(9.438rem, 40vw, 10.125rem);
 
     &:hover, &:focus {
-        background-color: none;
-        border: 1px solid var(--green);
+        background-color: var(--purple-900);
         color: var(--green);
     }
 }
 
 .button__secondary {
+    background-color: var(--purple-900);
+    border: none;
+    border-bottom: 3px solid var(--green);
     color: var(--white);
+    cursor: pointer;
+    font-family: $font-manrope;
+    font-size: 1.125rem;
+    font-weight: 700;
+    padding: 3px 1px 3px 0px;
 
     &:hover, &:focus {
         color: var(--green);

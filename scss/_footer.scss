@@ -1,6 +1,7 @@
 .footer {
     align-items: center;
     display: flex;
+    flex-direction: column;
     gap: 3.5rem;
     height: clamp(16.288rem, 33vw, 20.288rem);
     justify-content: center;
@@ -13,4 +14,16 @@
 .footer__social {
     display: flex;
     gap: 1.75rem;
+}
+
+.social_icon {
+    path {
+        fill: var(--slate-500);
+    }
+
+    &:hover, &:focus {
+        path {
+            fill: var(--slate-900);
+        }
+    }
 }
