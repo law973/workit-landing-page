@@ -1,7 +1,7 @@
 @font-face {
   font-display: swap;
   font-family: "Fraunces";
-  src: url("../assets/fonts/fraunces/Fraunces-VariableFont_SOFT,WONK,opsz,wght.ttf");
+  src: url("../assets/fonts/fraunces/static/Fraunces_144pt-SemiBold.ttf");
 }
 @font-face {
   font-display: swap;
@@ -13,6 +13,7 @@
   --purple-100: #FCF8FF;
   --purple-500: #584D62;
   --purple-900: #24053E;
+  --slate-100: #FCF8FF;
   --slate-500: #584D62;
   --slate-900: #0f172a;
   --white: #fff;
@@ -26,8 +27,13 @@
   margin: 0;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   line-height: 1.5;
+  min-height: 100%;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -99,7 +105,7 @@ p, h1, h2, h3, h4, h5, h6 {
 .navigation .navigation__content {
   display: flex;
   justify-content: space-between;
-  width: clamp(20.938rem, 89.2vw, 42.5rem);
+  width: clamp(18.125rem, 89.3vw, 42.5rem);
 }
 @media screen and (min-width: 768px) {
   .navigation {
@@ -111,14 +117,27 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .hero__container {
+  align-items: center;
   background-color: var(--purple-900);
   color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  height: clamp(24.375rem, 103vw, 26.063rem);
+}
+@media screen and (min-width: 768px) {
+  .hero__container {
+    height: clamp(26.063rem, 54.1vw, 38rem);
+  }
 }
 .hero__container .hero__text {
   font-family: "Fraunces", sans-serif;
   font-size: clamp(3rem, 12.7vw, 3.75rem);
   font-weight: 600;
   line-height: 100%;
+  margin-top: 3.5rem;
+  padding: 0 1rem;
+  text-align: center;
 }
 .hero__container .hero__text span {
   text-decoration: underline var(--green) solid 3px;
@@ -129,30 +148,44 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
-ol li {
+.value {
+  background-color: var(--slate-100);
+}
+.value ol li {
   color: var(--slate-900);
 }
-ol li span {
+.value ol li span {
   font-family: "Fraunces", sans-serif;
   font-size: clamp(1.5rem, 6.3vw, 1.75rem);
   font-weight: 600;
   line-height: 120%;
 }
-ol li p {
+.value ol li p {
   font-size: 1rem;
   font-family: "Manrope", sans-serif;
   line-height: 180%;
 }
 @media screen and (min-width: 768px) {
-  ol li span {
+  .value ol li span {
     font-size: clamp(1.75rem, 3.5vw, 2rem);
   }
-  ol li p {
+  .value ol li p {
     font-size: clamp(1rem, 1.9vw, 1.125rem);
   }
 }
 
+.call_to_action {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+}
+
+.call_to_action__content {
+  margin-top: 7rem;
+}
+
 .card {
+  align-items: center;
   background-color: var(--purple-900);
   color: var(--white);
   display: flex;
@@ -160,6 +193,7 @@ ol li p {
   gap: 2rem;
   padding: clamp(2rem, 8vw, 3rem);
   text-align: center;
+  width: clamp(18.125rem, 89.3vw, 31.5rem);
 }
 .card span {
   font-size: clamp(2rem, 8.4vw, 3rem);
@@ -174,8 +208,10 @@ ol li p {
 }
 @media screen and (min-width: 768px) {
   .card {
+    align-items: flex-start;
     padding: clamp(3rem, 6vw, 4rem);
     text-align: left;
+    width: clamp(31.5rem, 65.5vw, 45.625rem);
   }
   .card span {
     font-size: clamp(3rem, 6.1vw, 3.5rem);

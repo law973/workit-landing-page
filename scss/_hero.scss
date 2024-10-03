@@ -1,11 +1,24 @@
 .hero__container {
+    align-items: center;
     background-color: var(--purple-900);
     color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    height: clamp(24.375rem, 103vw, 26.063rem);
+
+    @media screen and (min-width: 768px) {
+        height: clamp(26.063rem, 54.1vw, 38rem);
+    }
+
     .hero__text {
         font-family: $font-fraunces;
         font-size: clamp(3rem, 12.7vw, 3.75rem);
         font-weight: 600;
         line-height: 100%;
+        margin-top: 3.5rem;
+        padding: 0 1rem;
+        text-align: center;
 
         span {
             text-decoration: underline var(--green) solid 3px;
