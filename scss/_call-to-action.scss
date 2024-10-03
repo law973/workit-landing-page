@@ -6,4 +6,59 @@
 
 .call_to_action__content {
     margin-top: 7rem;
+    position: relative;
+}
+
+.call_to_action__image {
+    left: 50%;
+    position: absolute;
+    margin: 0 auto;
+    top: 0;
+    transform: translate(-50%, 0);
+    width: 280px;
+}
+
+.call_to_action__card {
+    align-items: center;
+    background-color: var(--purple-900);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 14.5rem;
+    padding: clamp(2rem, 8vw, 3rem);
+    position: relative;
+    text-align: center;
+    width: clamp(18.125rem, 89.3vw, 31.5rem);
+    z-index: 1;
+
+    span {
+        font-size: clamp(2rem, 8.4vw, 3rem);
+        font-family: $font-fraunces;
+        font-weight: 600;
+        line-height: 120%;
+    }
+
+    p {
+        font-size: 1rem;
+        font-family: $font-manrope;
+        line-height: 180%;
+    }
+
+    // Tablet Breakpoint
+    @media screen and (min-width: 768px) {
+        align-items: flex-start;
+        padding: clamp(3rem, 6vw, 4rem);
+        margin-top: 10.5rem;
+        text-align: left;
+        width: clamp(31.5rem, 65.5vw, 45.625rem);
+
+        span {
+            font-size: clamp(3rem, 6.1vw, 3.5rem);
+        }
+
+        p {
+            font-size: clamp(1rem, 1.9vw, 1.125rem);
+        }
+    }
 }
