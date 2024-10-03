@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 <!-- - Solution URL: [Frontend Mentor]() -->
-<!-- - Live Site URL: [GitHub Pages]() -->
+- Live Site URL: [GitHub Pages](https://law973.github.io/workit-landing-page/)
 
 ## My Process
 

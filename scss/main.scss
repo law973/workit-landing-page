@@ -1,0 +1,21 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Fraunces';
+    src: url('../assets/fonts/fraunces/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf');
+}
+
+@font-face {
+    font-display: swap;
+    font-family: 'Manrope';
+    src: url('../assets/fonts/manrope/Manrope-VariableFont_wght.ttf');
+}
+
+// Import SCSS partials
+@import 'variables';
+@import 'extends';
+@import 'mixins';
+@import 'reset';
+@import 'screen-reader-only';
+@import 'button';
+@import 'card';
+@import 'footer';

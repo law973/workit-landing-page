@@ -1,0 +1,16 @@
+.footer {
+    align-items: center;
+    display: flex;
+    gap: 3.5rem;
+    height: clamp(16.288rem, 33vw, 20.288rem);
+    justify-content: center;
+}
+
+// .footer__logo {
+
+// }
+
+.footer__social {
+    display: flex;
+    gap: 1.75rem;
+}
