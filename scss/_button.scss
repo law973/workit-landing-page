@@ -6,13 +6,23 @@
     font-family: $font-manrope;
     font-size: clamp(1rem, 4vw, 1.125rem);
     font-weight: 700;
-    padding: 12px 32px;
+    padding: 13px 31px;
     width: fit-content;
-    // width: clamp(9.438rem, 40vw, 10.125rem);
 
     &:hover, &:focus {
         background-color: var(--purple-900);
+        clip-path: polygon(
+            -1px 0px, 
+            0px -1px,
+            100% -1px,
+            calc(100% + 1px) 0px,
+            calc(100% + 1px) 100%,
+            100% calc(100% + 1px),
+            0px calc(100% + 1px),
+            -1px 100%
+        );
         color: var(--green);
+        outline: 1px solid var(--green);
     }
 }
 
