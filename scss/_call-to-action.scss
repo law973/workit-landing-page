@@ -5,8 +5,18 @@
 }
 
 .call_to_action__content {
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
     margin-top: 7rem;
     position: relative;
+    width: clamp(18.125rem, 89.3vw, 42.5rem);
+
+    // Tablet Breakpoint
+    @media screen and (min-width: 768px) {
+        justify-content: flex-end;
+        width: clamp(42.5rem, 88.4vw, 70rem);
+    }
 }
 
 .call_to_action__image {
@@ -16,6 +26,13 @@
     top: 0;
     transform: translate(-50%, 0);
     width: 280px;
+
+    // Tablet Breakpoint
+    @media screen and (min-width: 768px) {
+        left: 0;
+        transform: none;
+        width: clamp(280px, 36.3vw, 477px);
+    }
 }
 
 .call_to_action__card {
@@ -27,7 +44,6 @@
     gap: 2rem;
     margin-top: 14.5rem;
     padding: clamp(2rem, 8vw, 3rem);
-    position: relative;
     text-align: center;
     width: clamp(18.125rem, 89.3vw, 31.5rem);
     z-index: 1;

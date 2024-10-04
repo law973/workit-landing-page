@@ -14,16 +14,23 @@
 .footer__social {
     display: flex;
     gap: 1.75rem;
-}
 
-.social_icon {
-    path {
-        fill: var(--slate-500);
-    }
+    a {
+        align-items: center;
+        display: flex;
+        
+        .social_icon {
+            path {
+                fill: var(--slate-500);
+            }
+        }
 
-    &:hover, &:focus {
-        path {
-            fill: var(--slate-900);
+        &:hover, &:focus {
+            .social_icon {
+                path {
+                    fill: var(--slate-900);
+                }
+            }
         }
     }
 }

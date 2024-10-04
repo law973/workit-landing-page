@@ -181,8 +181,18 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .call_to_action__content {
+  align-items: flex-end;
+  display: flex;
+  justify-content: center;
   margin-top: 7rem;
   position: relative;
+  width: clamp(18.125rem, 89.3vw, 42.5rem);
+}
+@media screen and (min-width: 768px) {
+  .call_to_action__content {
+    justify-content: flex-end;
+    width: clamp(42.5rem, 88.4vw, 70rem);
+  }
 }
 
 .call_to_action__image {
@@ -192,6 +202,13 @@ p, h1, h2, h3, h4, h5, h6 {
   top: 0;
   transform: translate(-50%, 0);
   width: 280px;
+}
+@media screen and (min-width: 768px) {
+  .call_to_action__image {
+    left: 0;
+    transform: none;
+    width: clamp(280px, 36.3vw, 477px);
+  }
 }
 
 .call_to_action__card {
@@ -203,7 +220,6 @@ p, h1, h2, h3, h4, h5, h6 {
   gap: 2rem;
   margin-top: 14.5rem;
   padding: clamp(2rem, 8vw, 3rem);
-  position: relative;
   text-align: center;
   width: clamp(18.125rem, 89.3vw, 31.5rem);
   z-index: 1;
@@ -248,11 +264,14 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   gap: 1.75rem;
 }
-
-.social_icon path {
+.footer__social a {
+  align-items: center;
+  display: flex;
+}
+.footer__social a .social_icon path {
   fill: var(--slate-500);
 }
-.social_icon:hover path, .social_icon:focus path {
+.footer__social a:hover .social_icon path, .footer__social a:focus .social_icon path {
   fill: var(--slate-900);
 }
 
