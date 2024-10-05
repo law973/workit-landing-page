@@ -7,6 +7,7 @@
     gap: 2.5rem;
     height: clamp(24.375rem, 103vw, 26.063rem);
 
+    // Tablet Breakpoint
     @media screen and (min-width: 768px) {
         height: clamp(26.063rem, 54.1vw, 38rem);
     }
@@ -28,5 +29,40 @@
         @media screen and (min-width: 768px) {
             font-size: clamp(3.75rem, 7.7vw, 5rem);
         }
+    }
+}
+
+.hero__ornamental_background {
+    background-color: red;
+    height: clamp(6.5rem, 27vw, 12rem);
+    position: relative;
+
+    // Tablet Breakpoint
+    @media screen and (min-width: 768px) {
+        height: clamp(12rem, 24vw, 14.563rem);
+    }
+}
+
+.hero__ornamental_curve {
+    background-color: var(--purple-900);
+    clip-path: ellipse(50% calc(100% - 1px) at top);
+    height: clamp(1.5rem, 6.3vw, 3rem);
+
+    // Tablet Breakpoint
+    @media screen and (min-width: 768px) {
+        height: clamp(3.5rem, 7.1vw, 4.5rem);
+    }
+}
+
+.illustration {
+    bottom: 0;
+    height: clamp(178px, 47.3vw, 286px);
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, 0);
+
+    // Tablet Breakpoint
+    @media screen and (min-width: 768px) {
+        height: clamp(286px, 37.1vw, 427px);
     }
 }

@@ -150,17 +150,65 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 
+.hero__ornamental_background {
+  background-color: red;
+  height: clamp(6.5rem, 27vw, 12rem);
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .hero__ornamental_background {
+    height: clamp(12rem, 24vw, 14.563rem);
+  }
+}
+
+.hero__ornamental_curve {
+  background-color: var(--purple-900);
+  clip-path: ellipse(50% calc(100% - 1px) at top);
+  height: clamp(1.5rem, 6.3vw, 3rem);
+}
+@media screen and (min-width: 768px) {
+  .hero__ornamental_curve {
+    height: clamp(3.5rem, 7.1vw, 4.5rem);
+  }
+}
+
+.illustration {
+  bottom: 0;
+  height: clamp(178px, 47.3vw, 286px);
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, 0);
+}
+@media screen and (min-width: 768px) {
+  .illustration {
+    height: clamp(286px, 37.1vw, 427px);
+  }
+}
+
 .value {
   background-color: var(--slate-100);
 }
+.value ol {
+  counter-reset: value;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-left: 0;
+}
 .value ol li {
+  align-items: center;
   color: var(--slate-900);
+  counter-increment: value;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 .value ol li span {
   font-family: "Fraunces", sans-serif;
   font-size: clamp(1.5rem, 6.3vw, 1.75rem);
   font-weight: 600;
   line-height: 120%;
+  margin-bottom: 1rem;
 }
 .value ol li p {
   font-size: 1rem;
@@ -174,6 +222,35 @@ p, h1, h2, h3, h4, h5, h6 {
   .value ol li p {
     font-size: clamp(1rem, 1.9vw, 1.125rem);
   }
+}
+.value ol li:before {
+  align-items: center;
+  border: 1px solid var(--slate-500);
+  border-radius: 50%;
+  content: counter(value);
+  display: flex;
+  font-family: "Fraunces", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  height: 3rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  width: 3rem;
+}
+.value .value__ornamental_background {
+  background-color: red;
+  height: clamp(1.5rem, 6.3vw, 3rem);
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .value .value__ornamental_background {
+    height: 4.5rem;
+  }
+}
+.value .value__ornamental_curve {
+  background-color: var(--slate-100);
+  clip-path: ellipse(50% calc(100% - 1px) at top);
+  height: 100%;
 }
 
 .call_to_action {
