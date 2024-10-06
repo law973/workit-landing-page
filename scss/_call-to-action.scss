@@ -20,18 +20,15 @@
 }
 
 .call_to_action__image {
-    left: 50%;
+    @include founder_image_dimensions(280px);
     position: absolute;
-    margin: 0 auto;
     top: 0;
-    transform: translate(-50%, 0);
-    width: 280px;
 
     // Tablet Breakpoint
     @media screen and (min-width: 768px) {
+        @include founder_image_dimensions(clamp(280px, 36.3vw, 477px));
         left: 0;
         transform: none;
-        width: clamp(280px, 36.3vw, 477px);
     }
 }
 

@@ -19,17 +19,13 @@
         align-items: center;
         display: flex;
         
-        .social_icon {
-            path {
-                fill: var(--slate-500);
-            }
+        .social_icon path {
+            fill: var(--slate-500);
         }
 
         &:hover, &:focus {
-            .social_icon {
-                path {
-                    fill: var(--slate-900);
-                }
+            .social_icon path {
+                fill: var(--slate-900);
             }
         }
     }

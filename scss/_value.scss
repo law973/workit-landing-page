@@ -53,9 +53,14 @@
                 margin-bottom: 1.5rem;
                 width: 3rem;
             }
+        }
 
-            // Tablet Breakpoint
-            @media screen and (min-width: 768px) {
+        // Tablet Breakpoint
+        @media screen and (min-width: 768px) {
+            padding: clamp(56px, 7.1vw, 88px) 0 clamp(44px, 5.6vw, 80px);
+            width: clamp(42.5rem, 88.4vw, 43.5rem);
+
+            li {
                 flex-direction: row;
 
                 div {
@@ -77,9 +82,15 @@
                     margin: 0 3.5rem 0 0;
                 }
             }
+        }
 
-            // Desktop Breakpoint
-            @media screen and (min-width: 1440px) {
+        // Desktop Breakpoint
+        @media screen and (min-width: 1440px) {
+            flex-direction: row;
+            padding-bottom: 144px;
+            width: 70rem;
+
+            li {
                 flex-direction: column;
                 width: 22rem;
 
@@ -92,19 +103,6 @@
                     margin: 0 0 3.5rem 0;
                 }
             }
-        }
-
-        // Tablet Breakpoint
-        @media screen and (min-width: 768px) {
-            padding: clamp(56px, 7.1vw, 88px)  0 clamp(44px, 5.6vw, 80px);
-            width: clamp(42.5rem, 88.4vw, 43.5rem);
-        }
-
-        // Desktop Breakpoint
-        @media screen and (min-width: 1440px) {
-            flex-direction: row;
-            padding-bottom: 144px;
-            width: 70rem;
         }
     }
 
