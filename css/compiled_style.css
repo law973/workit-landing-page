@@ -122,11 +122,8 @@ p, h1, h2, h3, h4, h5, h6 {
   border: 1px solid var(--green);
   color: var(--slate-900);
   cursor: pointer;
-  font-family: "Manrope", sans-serif;
-  font-size: clamp(1rem, 4vw, 1.125rem);
-  font-weight: 700;
+  font: 700 clamp(1rem, 4vw, 1.125rem)/1.5 "Manrope", sans-serif;
   padding: 13px 31px;
-  width: fit-content;
 }
 .button__primary:hover, .button__primary:focus {
   background-color: var(--purple-900);
@@ -141,9 +138,7 @@ p, h1, h2, h3, h4, h5, h6 {
   border-bottom: 3px solid var(--green);
   color: var(--white);
   cursor: pointer;
-  font-family: "Manrope", sans-serif;
-  font-size: 1.125rem;
-  font-weight: 700;
+  font: 700 1.125rem/1.5 "Manrope", sans-serif;
   padding: 3px 1px 3px 0px;
 }
 .button__secondary:hover, .button__secondary:focus {
