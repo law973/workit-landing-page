@@ -9,14 +9,14 @@
   src: url("../assets/fonts/manrope/Manrope-VariableFont_wght.ttf");
 }
 :root {
-  --green: #44FFA1;
-  --purple-100: #FCF8FF;
-  --purple-500: #584D62;
-  --purple-900: #24053E;
-  --slate-100: #FCF8FF;
-  --slate-500: #584D62;
-  --slate-900: #0f172a;
-  --white: #fff;
+  --green: hsl(150, 100%, 63%);
+  --purple-100: hsl(274, 100%, 99%);
+  --purple-500: hsl(271, 12%, 34%);
+  --purple-900: hsl(273, 85%, 13%);
+  --slate-100: hsl(274, 100%, 99%);
+  --slate-500: hsl(271, 12%, 34%);
+  --slate-900: hsl(222, 47%, 11%);
+  --white: hsl(0, 0%, 100%);
 }
 
 .workit_logo_dimensions, .footer__logo, .navigation .navigation__logo {
@@ -74,19 +74,22 @@ p, h1, h2, h3, h4, h5, h6 {
   white-space: nowrap !important;
 }
 
+.background_pattern {
+  opacity: 0;
+  position: absolute;
+  transition: opacity 0.3s linear, transform 0.5s;
+}
+@media screen and (min-width: 768px) {
+  .background_pattern {
+    opacity: 1;
+  }
+}
+
 #background_pattern_one {
   height: 317px;
   left: calc(-341px + clamp(117px, 14vw, 201px));
-  opacity: 0;
-  position: absolute;
   top: clamp(58px, 7.4vw, 106px);
-  transition: opacity 0.3s linear, transform 0.5s;
   width: 341px;
-}
-@media screen and (min-width: 768px) {
-  #background_pattern_one {
-    opacity: 1;
-  }
 }
 @media screen and (min-width: 1440px) {
   #background_pattern_one {
@@ -96,33 +99,17 @@ p, h1, h2, h3, h4, h5, h6 {
 
 #background_pattern_two {
   height: 181px;
-  opacity: 0;
-  position: absolute;
   right: calc(-174px + clamp(79px, 10vw, 127px));
   top: clamp(262px, 33vw, 342px);
-  transition: opacity 0.3s linear;
   width: 174px;
-}
-@media screen and (min-width: 768px) {
-  #background_pattern_two {
-    opacity: 1;
-  }
 }
 
 #background_pattern_three {
   bottom: calc(-212px + clamp(98px, 12.6vw, 147px));
   height: 212px;
-  opacity: 0;
-  position: absolute;
   right: clamp(13.71px, 1.6vw, 22.71px);
-  transition: opacity 0.3s linear, transform 0.5s;
   width: 221px;
   z-index: 2;
-}
-@media screen and (min-width: 768px) {
-  #background_pattern_three {
-    opacity: 1;
-  }
 }
 @media screen and (min-width: 1440px) {
   #background_pattern_three {

@@ -2,3 +2,9 @@
     height: $size;
     width: $size;
 }
+
+@mixin social_icon_color($color) {
+    .social_icon path {
+        fill: $color;
+    }
+}

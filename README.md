@@ -1,4 +1,4 @@
-# Frontend Mentor - Workit landing page solution
+# Frontend Mentor - Workit Landing Page Solution
 
 This is a solution to the [Workit Landing Page Challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/workit-landing-page-2fYnyle5lu). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
@@ -12,9 +12,7 @@ This is a solution to the [Workit Landing Page Challenge on Frontend Mentor](htt
   - [Built With](#built-with)
   - [What I Learned](#what-i-learned)
   - [Continued Development](#continued-development)
-  - [Useful Resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgements](#acknowledgements)
 
 ## Overview
 
@@ -27,7 +25,9 @@ Users should be able to:
 
 ### Screenshot
 
-<!-- ![](./screenshot.jpg) -->
+<!-- ![](./screenshot/screenshot.png) -->
+<!-- ![](./screenshot/screenshot_tablet.png) -->
+<!-- ![](./screenshot/screenshot_mobile.png) -->
 
 ### Links
 
@@ -56,10 +56,7 @@ const proudOfThisFunc = () => {
 
 ### Continued Development
 
-### Useful Resources
-
-<!-- - [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept. -->
+<!-- Something here -->
 
 ## Author
 
@@ -67,5 +64,3 @@ const proudOfThisFunc = () => {
 - Frontend Mentor - [@law973](https://www.frontendmentor.io/profile/law973)
 - LinkedIn - [Levi Wright](https://www.linkedin.com/in/levi-arthur-wright/)
 - GitHub - [@law973](https://github.com/law973)
-
-## Acknowledgements
