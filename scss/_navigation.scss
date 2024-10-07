@@ -6,9 +6,14 @@
     justify-content: center;
 
     .navigation__content {
+        align-items: center;
         display: flex;
         justify-content: space-between;
         width: clamp(18.125rem, 89.3vw, 42.5rem);
+    }
+
+    .navigation__logo {
+        @extend .workit_logo_dimensions;
     }
 
     // Tablet Breakpoint

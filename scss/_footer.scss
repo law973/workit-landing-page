@@ -7,9 +7,9 @@
     justify-content: center;
 }
 
-// .footer__logo {
-
-// }
+.footer__logo {
+    @extend .workit_logo_dimensions;
+}
 
 .footer__social {
     display: flex;

@@ -107,7 +107,7 @@
     }
 
     .value__ornamental_background {
-        background-color: red;
+        background-color: var(--white);
         height: clamp(1.5rem, 6.3vw, 3rem);
         position: relative;
 

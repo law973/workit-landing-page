@@ -19,6 +19,11 @@
   --white: #fff;
 }
 
+.workit_logo_dimensions, .footer__logo, .navigation .navigation__logo {
+  height: 26px;
+  width: 97px;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -105,9 +110,24 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 #background_pattern_three {
+  bottom: calc(-212px + clamp(98px, 12.6vw, 147px));
+  height: 212px;
   opacity: 0;
   position: absolute;
-  transition: opacity 0.3s linear;
+  right: clamp(13.71px, 1.6vw, 22.71px);
+  transition: opacity 0.3s linear, transform 0.5s;
+  width: 221px;
+  z-index: 2;
+}
+@media screen and (min-width: 768px) {
+  #background_pattern_three {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1440px) {
+  #background_pattern_three {
+    transform: translateX(-85px);
+  }
 }
 
 .button__primary {
@@ -151,6 +171,7 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 .navigation .navigation__content {
+  align-items: center;
   display: flex;
   justify-content: space-between;
   width: clamp(18.125rem, 89.3vw, 42.5rem);
@@ -162,6 +183,11 @@ p, h1, h2, h3, h4, h5, h6 {
   .navigation .navigation__content {
     width: clamp(42.5rem, 88.4vw, 70rem);
   }
+}
+
+.hero {
+  overflow: hidden;
+  position: relative;
 }
 
 .hero__container {
@@ -197,7 +223,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .hero__ornamental_background {
-  background-color: red;
+  background-color: var(--slate-100);
   height: clamp(6.5rem, 27vw, 12rem);
   position: relative;
 }
@@ -326,7 +352,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 .value .value__ornamental_background {
-  background-color: red;
+  background-color: var(--white);
   height: clamp(1.5rem, 6.3vw, 3rem);
   position: relative;
 }

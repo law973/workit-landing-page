@@ -1,3 +1,8 @@
+.hero {
+    overflow: hidden;
+    position: relative;
+}
+
 .hero__container {
     align-items: center;
     background-color: var(--purple-900);
@@ -33,7 +38,7 @@
 }
 
 .hero__ornamental_background {
-    background-color: red;
+    background-color: var(--slate-100);
     height: clamp(6.5rem, 27vw, 12rem);
     position: relative;
 
