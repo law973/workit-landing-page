@@ -26,8 +26,9 @@
     z-index: 1;
 
     span {
-        text-decoration: underline var(--green) solid 3px;
-        -webkit-text-decoration: underline var(--green) solid 3px;
+        text-decoration-color: var(--green);
+        text-decoration-line: underline;
+        text-decoration-thickness: 3px;
     }
 
     // Tablet Breakpoint
