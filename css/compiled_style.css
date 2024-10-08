@@ -363,36 +363,6 @@ p, h1, h2, h3, h4, h5, h6 {
   justify-content: center;
 }
 
-.call_to_action__content {
-  align-items: flex-end;
-  display: flex;
-  justify-content: center;
-  margin-top: 7rem;
-  position: relative;
-  width: clamp(18.125rem, 89.3vw, 42.5rem);
-}
-@media screen and (min-width: 768px) {
-  .call_to_action__content {
-    justify-content: flex-end;
-    width: clamp(42.5rem, 88.4vw, 70rem);
-  }
-}
-
-.call_to_action__image {
-  height: 280px;
-  width: 280px;
-  position: absolute;
-  top: 0;
-}
-@media screen and (min-width: 768px) {
-  .call_to_action__image {
-    height: clamp(280px, 36.3vw, 477px);
-    width: clamp(280px, 36.3vw, 477px);
-    left: 0;
-    transform: none;
-  }
-}
-
 .call_to_action__card {
   align-items: center;
   background-color: var(--purple-900);
@@ -405,18 +375,6 @@ p, h1, h2, h3, h4, h5, h6 {
   position: relative;
   text-align: center;
   width: clamp(18.125rem, 89.3vw, 31.5rem);
-  z-index: 1;
-}
-.call_to_action__card span {
-  font-size: clamp(2rem, 8.4vw, 3rem);
-  font-family: "Fraunces", sans-serif;
-  font-weight: 600;
-  line-height: 120%;
-}
-.call_to_action__card p {
-  font-size: 1rem;
-  font-family: "Manrope", sans-serif;
-  line-height: 180%;
 }
 @media screen and (min-width: 768px) {
   .call_to_action__card {
@@ -426,16 +384,53 @@ p, h1, h2, h3, h4, h5, h6 {
     text-align: left;
     width: clamp(31.5rem, 65.5vw, 45.625rem);
   }
-  .call_to_action__card span {
+}
+
+.call_to_action__content {
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .call_to_action__content {
+    justify-content: flex-end;
+    width: clamp(42.5rem, 88.4vw, 70rem);
+  }
+}
+
+.call_to_action__heading {
+  font: 600 clamp(2rem, 8.4vw, 3rem)/120% "Fraunces", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .call_to_action__heading {
     font-size: clamp(3rem, 6.1vw, 3.5rem);
   }
-  .call_to_action__card p {
+}
+
+.call_to_action__image {
+  height: 280px;
+  width: 280px;
+  position: absolute;
+}
+@media screen and (min-width: 768px) {
+  .call_to_action__image {
+    height: clamp(280px, 36.3vw, 477px);
+    width: clamp(280px, 36.3vw, 477px);
+    left: 0;
+  }
+}
+
+.call_to_action__paragraph {
+  font: 1rem/180% "Manrope", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .call_to_action__paragraph {
     font-size: clamp(1rem, 1.9vw, 1.125rem);
   }
 }
 
 #call_to_action__button {
-  position: relative;
   z-index: 1;
 }
 

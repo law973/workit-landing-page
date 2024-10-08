@@ -4,34 +4,6 @@
     justify-content: center;
 }
 
-.call_to_action__content {
-    align-items: flex-end;
-    display: flex;
-    justify-content: center;
-    margin-top: 7rem;
-    position: relative;
-    width: clamp(18.125rem, 89.3vw, 42.5rem);
-
-    // Tablet Breakpoint
-    @media screen and (min-width: 768px) {
-        justify-content: flex-end;
-        width: clamp(42.5rem, 88.4vw, 70rem);
-    }
-}
-
-.call_to_action__image {
-    @include founder_image_dimensions(280px);
-    position: absolute;
-    top: 0;
-
-    // Tablet Breakpoint
-    @media screen and (min-width: 768px) {
-        @include founder_image_dimensions(clamp(280px, 36.3vw, 477px));
-        left: 0;
-        transform: none;
-    }
-}
-
 .call_to_action__card {
     align-items: center;
     background-color: var(--purple-900);
@@ -44,20 +16,6 @@
     position: relative;
     text-align: center;
     width: clamp(18.125rem, 89.3vw, 31.5rem);
-    z-index: 1;
-
-    span {
-        font-size: clamp(2rem, 8.4vw, 3rem);
-        font-family: $font-fraunces;
-        font-weight: 600;
-        line-height: 120%;
-    }
-
-    p {
-        font-size: 1rem;
-        font-family: $font-manrope;
-        line-height: 180%;
-    }
 
     // Tablet Breakpoint
     @media screen and (min-width: 768px) {
@@ -66,18 +24,51 @@
         margin-top: 10.5rem;
         text-align: left;
         width: clamp(31.5rem, 65.5vw, 45.625rem);
+    }
+}
 
-        span {
-            font-size: clamp(3rem, 6.1vw, 3.5rem);
-        }
+.call_to_action__content {
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    position: relative;
 
-        p {
-            font-size: clamp(1rem, 1.9vw, 1.125rem);
-        }
+    // Tablet Breakpoint
+    @media screen and (min-width: 768px) {
+        justify-content: flex-end;
+        width: clamp(42.5rem, 88.4vw, 70rem);
+    }
+}
+
+.call_to_action__heading {
+    font: 600 clamp(2rem, 8.4vw, 3rem)/120% $font-fraunces;
+
+    // Tablet Breakpoint
+    @media screen and (min-width: 768px) {
+        font-size: clamp(3rem, 6.1vw, 3.5rem);
+    }
+}
+
+.call_to_action__image {
+    @include founder_image_dimensions(280px);
+    position: absolute;
+
+    // Tablet Breakpoint
+    @media screen and (min-width: 768px) {
+        @include founder_image_dimensions(clamp(280px, 36.3vw, 477px));
+        left: 0;
+    }
+}
+
+.call_to_action__paragraph {
+    font: 1rem/180% $font-manrope;
+
+    // Tablet Breakpoint
+    @media screen and (min-width: 768px) {
+        font-size: clamp(1rem, 1.9vw, 1.125rem);
     }
 }
 
 #call_to_action__button {
-    position: relative;
     z-index: 1;
 }
