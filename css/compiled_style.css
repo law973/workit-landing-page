@@ -19,7 +19,7 @@
   --white: hsl(0, 0%, 100%);
 }
 
-.workit_logo_dimensions, .footer__logo, .navigation .navigation__logo {
+.workit_logo_dimensions, .footer__logo, .navigation__logo {
   height: 26px;
   width: 97px;
 }
@@ -39,7 +39,10 @@ html {
 body {
   line-height: 1.5;
   min-height: 100%;
+  text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
 }
 
 img, picture, video, canvas, svg {
@@ -152,17 +155,20 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 4.188rem;
   justify-content: center;
 }
-.navigation .navigation__content {
+@media screen and (min-width: 768px) {
+  .navigation {
+    height: clamp(4.188rem, 8.6vw, 5.688rem);
+  }
+}
+
+.navigation__content {
   align-items: center;
   display: flex;
   justify-content: space-between;
   width: clamp(18.125rem, 89.3vw, 42.5rem);
 }
 @media screen and (min-width: 768px) {
-  .navigation {
-    height: clamp(4.188rem, 8.6vw, 5.688rem);
-  }
-  .navigation .navigation__content {
+  .navigation__content {
     width: clamp(42.5rem, 88.4vw, 70rem);
   }
 }
@@ -172,7 +178,7 @@ p, h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
 
-.hero__container {
+.hero__content {
   align-items: center;
   background-color: var(--purple-900);
   color: var(--white);
@@ -182,32 +188,42 @@ p, h1, h2, h3, h4, h5, h6 {
   height: clamp(24.375rem, 103vw, 26.063rem);
 }
 @media screen and (min-width: 768px) {
-  .hero__container {
+  .hero__content {
     height: clamp(26.063rem, 54.1vw, 38rem);
   }
 }
-.hero__container .hero__text {
-  font-family: "Fraunces", sans-serif;
-  font-size: clamp(3rem, 12.7vw, 3.75rem);
-  font-weight: 600;
-  line-height: 100%;
+
+.hero__heading {
+  font: 600 clamp(3rem, 12.7vw, 3.75rem)/100% "Fraunces", sans-serif;
   margin-top: 3.5rem;
   padding: 0 1rem;
   text-align: center;
 }
-.hero__container .hero__text span {
+.hero__heading span {
   text-decoration: underline var(--green) solid 3px;
 }
 @media screen and (min-width: 768px) {
-  .hero__container .hero__text {
+  .hero__heading {
     font-size: clamp(3.75rem, 7.7vw, 5rem);
+  }
+}
+
+.hero__illustration {
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  width: clamp(266px, 82.6vw, 498px);
+}
+@media screen and (min-width: 768px) {
+  .hero__illustration {
+    width: clamp(498px, 64.7vw, 742px);
   }
 }
 
 .hero__ornamental_background {
   background-color: var(--slate-100);
   height: clamp(6.5rem, 27vw, 12rem);
-  position: relative;
 }
 @media screen and (min-width: 768px) {
   .hero__ornamental_background {
@@ -222,20 +238,13 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 @media screen and (min-width: 768px) {
   .hero__ornamental_curve {
+    clip-path: ellipse(50% calc(100% - 3px) at top);
     height: clamp(3.5rem, 7.1vw, 4.5rem);
   }
 }
-
-.illustration {
-  bottom: 0;
-  height: clamp(178px, 47.3vw, 286px);
-  left: 50%;
-  position: absolute;
-  transform: translate(-50%, 0);
-}
-@media screen and (min-width: 768px) {
-  .illustration {
-    height: clamp(286px, 37.1vw, 427px);
+@media screen and (min-width: 1440px) {
+  .hero__ornamental_curve {
+    clip-path: ellipse(50% calc(100% - 4px) at top);
   }
 }
 
