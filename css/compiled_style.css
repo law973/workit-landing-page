@@ -112,7 +112,6 @@ p, h1, h2, h3, h4, h5, h6 {
   height: 212px;
   right: clamp(13.71px, 1.6vw, 22.71px);
   width: 221px;
-  z-index: 2;
 }
 @media screen and (min-width: 1440px) {
   #background_pattern_three {
@@ -403,6 +402,7 @@ p, h1, h2, h3, h4, h5, h6 {
   gap: 2rem;
   margin-top: 14.5rem;
   padding: clamp(2rem, 8vw, 3rem);
+  position: relative;
   text-align: center;
   width: clamp(18.125rem, 89.3vw, 31.5rem);
   z-index: 1;
@@ -432,6 +432,11 @@ p, h1, h2, h3, h4, h5, h6 {
   .call_to_action__card p {
     font-size: clamp(1rem, 1.9vw, 1.125rem);
   }
+}
+
+#call_to_action__button {
+  position: relative;
+  z-index: 1;
 }
 
 .footer {

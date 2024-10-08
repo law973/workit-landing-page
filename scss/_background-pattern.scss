@@ -1,10 +1,12 @@
 .background_pattern {
+    // display: none;
     opacity: 0;
     position: absolute;
     transition: opacity 0.3s linear, transform 0.5s;
 
     // Tablet Breakpoint
     @media screen and (min-width: 768px) {
+        // display: block;
         opacity: 1;
     }
 }
@@ -33,7 +35,7 @@
     height: 212px;
     right: clamp(13.71px, 1.6vw, 22.71px);
     width: 221px;
-    z-index: 2;
+    // z-index: 2;
 
     // Desktop Breakpoint
     @media screen and (min-width: 1440px) {

@@ -41,6 +41,7 @@
     gap: 2rem;
     margin-top: 14.5rem;
     padding: clamp(2rem, 8vw, 3rem);
+    position: relative;
     text-align: center;
     width: clamp(18.125rem, 89.3vw, 31.5rem);
     z-index: 1;
@@ -74,4 +75,9 @@
             font-size: clamp(1rem, 1.9vw, 1.125rem);
         }
     }
+}
+
+#call_to_action__button {
+    position: relative;
+    z-index: 1;
 }
