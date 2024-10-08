@@ -14,14 +14,14 @@
 .footer__social {
     display: flex;
     gap: 1.75rem;
+}
 
-    a {
-        @include social_icon_color(var(--slate-500));
-        align-items: center;
-        display: flex;
+.footer__social_link {
+    @include social_icon_color(var(--slate-500));
+    align-items: center;
+    display: flex;
 
-        &:hover, &:focus {
-            @include social_icon_color(var(--slate-900));
-        }
+    &:hover, &:focus {
+        @include social_icon_color(var(--slate-900));
     }
 }

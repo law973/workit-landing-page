@@ -1,4 +1,8 @@
-@mixin founder_image_dimensions($size) {
+@mixin ornamental_path($deduction) {
+    clip-path: ellipse(50% calc(100% - $deduction) at top);
+}
+
+@mixin square_dimensions($size) {
     height: $size;
     width: $size;
 }

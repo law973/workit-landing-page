@@ -231,8 +231,8 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .hero__ornamental_curve {
-  background-color: var(--purple-900);
   clip-path: ellipse(50% calc(100% - 1px) at top);
+  background-color: var(--purple-900);
   height: clamp(1.5rem, 6.3vw, 3rem);
 }
 @media screen and (min-width: 768px) {
@@ -250,7 +250,18 @@ p, h1, h2, h3, h4, h5, h6 {
 .value {
   background-color: var(--slate-100);
 }
-.value ol {
+
+.value__heading {
+  font: 600 clamp(1.5rem, 6.3vw, 1.75rem)/120% "Fraunces", sans-serif;
+  margin-bottom: clamp(1rem, 4.1vw, 1.75rem);
+}
+@media screen and (min-width: 768px) {
+  .value__heading {
+    font-size: clamp(1.75rem, 3.5vw, 2rem);
+  }
+}
+
+.value__list {
   counter-reset: value;
   display: flex;
   flex-direction: column;
@@ -261,100 +272,103 @@ p, h1, h2, h3, h4, h5, h6 {
   transform: translate(-50%, 0);
   width: clamp(18.125rem, 89.3vw, 31.5rem);
 }
-.value ol li {
+@media screen and (min-width: 768px) {
+  .value__list {
+    padding: clamp(56px, 7.1vw, 88px) 0 clamp(44px, 5.6vw, 80px);
+    width: clamp(42.5rem, 88.4vw, 43.5rem);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .value__list {
+    flex-direction: row;
+    padding-bottom: 144px;
+    width: 70rem;
+  }
+}
+
+.value__list_item {
   align-items: center;
   color: var(--slate-900);
   counter-increment: value;
   display: flex;
   flex-direction: column;
-  text-align: center;
 }
-.value ol li div {
-  display: flex;
-  flex-direction: column;
-}
-.value ol li div span {
-  font-family: "Fraunces", sans-serif;
-  font-size: clamp(1.5rem, 6.3vw, 1.75rem);
-  font-weight: 600;
-  line-height: 120%;
-  margin-bottom: 1rem;
-}
-.value ol li div p {
-  font-size: 1rem;
-  font-family: "Manrope", sans-serif;
-  line-height: 180%;
-}
-.value ol li:before {
+.value__list_item:before {
+  height: 3rem;
+  width: 3rem;
   align-items: center;
   border: 1px solid var(--slate-500);
   border-radius: 50%;
   content: counter(value);
   display: flex;
-  font-family: "Fraunces", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 600;
-  height: 3rem;
+  font: 600 1.25rem/1.5 "Fraunces", sans-serif;
   justify-content: center;
   margin-bottom: 1.5rem;
-  width: 3rem;
 }
 @media screen and (min-width: 768px) {
-  .value ol {
-    padding: clamp(56px, 7.1vw, 88px) 0 clamp(44px, 5.6vw, 80px);
-    width: clamp(42.5rem, 88.4vw, 43.5rem);
-  }
-  .value ol li {
+  .value__list_item {
     flex-direction: row;
   }
-  .value ol li div {
-    text-align: left;
-    width: clamp(36rem, 74vw, 37rem);
-  }
-  .value ol li div span {
-    font-size: clamp(1.75rem, 3.5vw, 2rem);
-    margin-bottom: 1.75rem;
-  }
-  .value ol li div p {
-    font-size: clamp(1rem, 1.9vw, 1.125rem);
-  }
-  .value ol li:before {
+  .value__list_item:before {
     font-size: clamp(1.25rem, 2.5vw, 1.5rem);
     margin: 0 3.5rem 0 0;
   }
 }
 @media screen and (min-width: 1440px) {
-  .value ol {
-    flex-direction: row;
-    padding-bottom: 144px;
-    width: 70rem;
-  }
-  .value ol li {
+  .value__list_item {
     flex-direction: column;
     width: 22rem;
   }
-  .value ol li div {
-    text-align: center;
-    width: 100%;
-  }
-  .value ol li:before {
+  .value__list_item:before {
     margin: 0 0 3.5rem 0;
   }
 }
-.value .value__ornamental_background {
+
+.value__list_item_text {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .value__list_item_text {
+    text-align: left;
+    width: clamp(36rem, 74vw, 37rem);
+  }
+}
+@media screen and (min-width: 1440px) {
+  .value__list_item_text {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.value__ornamental_background {
   background-color: var(--white);
   height: clamp(1.5rem, 6.3vw, 3rem);
   position: relative;
 }
 @media screen and (min-width: 768px) {
-  .value .value__ornamental_background {
+  .value__ornamental_background {
     height: 4.5rem;
   }
 }
-.value .value__ornamental_curve {
-  background-color: var(--slate-100);
+
+.value__ornamental_curve {
   clip-path: ellipse(50% calc(100% - 1px) at top);
+  background-color: var(--slate-100);
   height: 100%;
+}
+@media screen and (min-width: 768px) {
+  .value__ornamental_curve {
+    clip-path: ellipse(50% calc(100% - 4px) at top);
+  }
+}
+
+.value__paragraph {
+  font: 1rem/180% "Manrope", sans-serif;
+}
+@media screen and (min-width: 768px) {
+  .value__paragraph {
+    font-size: clamp(1rem, 1.9vw, 1.125rem);
+  }
 }
 
 .call_to_action {
@@ -447,14 +461,15 @@ p, h1, h2, h3, h4, h5, h6 {
   display: flex;
   gap: 1.75rem;
 }
-.footer__social a {
+
+.footer__social_link {
   align-items: center;
   display: flex;
 }
-.footer__social a .social_icon path {
+.footer__social_link .social_icon path {
   fill: var(--slate-500);
 }
-.footer__social a:hover .social_icon path, .footer__social a:focus .social_icon path {
+.footer__social_link:hover .social_icon path, .footer__social_link:focus .social_icon path {
   fill: var(--slate-900);
 }
 
