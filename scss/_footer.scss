@@ -17,11 +17,17 @@
 }
 
 .footer__social_link {
-    @include social_icon_color(var(--slate-500));
     align-items: center;
     display: flex;
 
+    .social_icon path {
+        fill: var(--slate-500);
+        transition: fill 0.25s linear;
+    }
+
     &:hover, &:focus {
-        @include social_icon_color(var(--slate-900));
+        .social_icon path {
+            fill: var(--slate-900);
+        }
     }
 }

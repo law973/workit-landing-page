@@ -6,7 +6,7 @@ This is a solution to the [Workit Landing Page Challenge on Frontend Mentor](htt
 
 - [Overview](#overview)
   - [The Challenge](#the-challenge)
-  - [Screenshot](#screenshot)
+  - [Screenshots](#screenshots)
   - [Links](#links)
 - [My Process](#my-process)
   - [Built With](#built-with)
@@ -23,11 +23,11 @@ Users should be able to:
 - View the optimal layout for the interface depending on their device's screen size
 - See hover and focus states for all interactive elements on the page
 
-### Screenshot
+### Screenshots
 
-<!-- ![](./screenshot/screenshot.png) -->
-<!-- ![](./screenshot/screenshot_tablet.png) -->
-<!-- ![](./screenshot/screenshot_mobile.png) -->
+![](./screenshot/screenshot.png)
+![](./screenshot/screenshot_tablet.png)
+![](./screenshot/screenshot_mobile.png)
 
 ### Links
 
@@ -38,25 +38,40 @@ Users should be able to:
 
 ### Built With
 
+- Semantic HTML
+- CSS Flexbox
+- Media queries
+- SCSS
+- SCSS extends and mixins
+- CSS/SCSS variables
+- Mobile-first workflow
+
 ### What I Learned
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+The curved ornamental borders for the hero and value sections, along with the hover/focus state of the primary button, made me learn more about the clip-path property. I also became more familiar with calc() when shaping the primary button's outline and positioning the background patterns.
+
+Here's a snippet of CSS code I'm proud of:
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
-}
-```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+.button__primary {
+  &:hover, &:focus {
+    clip-path: polygon(
+      -1px 0px, 
+      0px -1px,
+      100% -1px,
+      calc(100% + 1px) 0px,
+      calc(100% + 1px) 100%,
+      100% calc(100% + 1px),
+      0px calc(100% + 1px),
+      -1px 100%
+    );
+  }
 }
 ```
 
 ### Continued Development
 
-<!-- Something here -->
+I'd like to do more projects like this one, where element positions (such as relative and absolute) and the z-index property have to be kept in mind to display and interact with things correctly. I'd also like to continue learning about using clip-path to create shapes and using calc() for various purposes. 
 
 ## Author
 

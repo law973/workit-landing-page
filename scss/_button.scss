@@ -5,6 +5,7 @@
     cursor: pointer;
     font: 700 clamp(1rem, 4vw, 1.125rem)/1.5 $font-manrope;
     padding: 13px 31px;
+    transition: background-color 0.25s linear, color 0.25s linear;
 
     &:hover, &:focus {
         background-color: var(--purple-900);
@@ -31,6 +32,7 @@
     cursor: pointer;
     font: 700 1.125rem/1.5 $font-manrope;
     padding: 3px 1px 3px 0px;
+    transition: color 0.25s linear;
 
     &:hover, &:focus {
         color: var(--green);
