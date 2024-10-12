@@ -1,8 +1,9 @@
-@mixin ornamental_path($deduction) {
-    clip-path: ellipse(50% calc(100% - $deduction) at top);
+@mixin curved-border-radii($height) {
+    border-bottom-left-radius: 50% $height;
+    border-bottom-right-radius: 50% $height;
 }
 
-@mixin square_dimensions($size) {
+@mixin equal_height_and_width($size) {
     height: $size;
     width: $size;
 }

@@ -6,7 +6,7 @@ This is a solution to the [Workit Landing Page Challenge on Frontend Mentor](htt
 
 - [Overview](#overview)
   - [The Challenge](#the-challenge)
-  - [Screenshots](#screenshots)
+  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My Process](#my-process)
   - [Built With](#built-with)
@@ -26,8 +26,6 @@ Users should be able to:
 ### Screenshots
 
 ![](./screenshot/screenshot.png)
-![](./screenshot/screenshot_tablet.png)
-![](./screenshot/screenshot_mobile.png)
 
 ### Links
 
@@ -42,13 +40,13 @@ Users should be able to:
 - CSS Flexbox
 - Media queries
 - SCSS
-- SCSS extends and mixins
+- SCSS mixins
 - CSS/SCSS variables
 - Mobile-first workflow
 
 ### What I Learned
 
-The curved ornamental borders for the hero and value sections, along with the hover/focus state of the primary button, made me learn more about the clip-path property. I also became more familiar with calc() when shaping the primary button's outline and positioning the background patterns.
+The curved ornamental borders for the hero and value sections, along with the hover/focus state of the primary button, made me learn more about the clip-path property (though I changed the method for creating the curved borders after my inital solution was submitted). I also became more familiar with calc() when shaping the primary button's outline and positioning the background patterns.
 
 Here's a snippet of CSS code I'm proud of:
 

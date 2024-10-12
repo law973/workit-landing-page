@@ -12,13 +12,13 @@
 
 // Import SCSS partials
 @import 'variables';
-@import 'extends';
 @import 'mixins';
 @import 'reset';
 @import 'screen-reader-only';
 @import 'background-pattern';
-@import 'button';
-@import 'navigation';
+@import 'logo';
+@import 'link';
+@import 'header';
 @import 'hero';
 @import 'value';
 @import 'call-to-action';

@@ -4,6 +4,36 @@
     justify-content: center;
 }
 
+// This content div contains the call-to-action image and card
+.call_to_action__content {
+    display: flex;
+    justify-content: center;
+    margin: 7rem 1.25rem 0;
+    max-width: 70rem;
+    position: relative;
+    width: 100%;
+
+    // Tablet Breakpoint
+    // Change in value of justify-content moves the card to the right of the content div
+    @media screen and (min-width: 768px) {
+        justify-content: flex-end;
+        margin: 7rem clamp(2.75rem, -5.536rem + 17.262vw, 10rem) 0;
+    }
+}
+
+.call_to_action__image {
+    @include equal_height_and_width(clamp(280px, 54.857px + 29.315vw, 477px));
+    object-fit: contain;
+    position: absolute;
+
+    // Tablet Breakpoint
+    // Change in value of left moves the image to the left of the content div
+    @media screen and (min-width: 768px) {
+        left: 0;
+    }
+}
+
+// This card contains the call-to-action heading
 .call_to_action__card {
     align-items: center;
     background-color: var(--purple-900);
@@ -12,63 +42,26 @@
     flex-direction: column;
     gap: 2rem;
     margin-top: 14.5rem;
-    padding: clamp(2rem, 8vw, 3rem);
+    padding: clamp(32px, 16.733px + 4.071vw, 48px);
     position: relative;
     text-align: center;
-    width: clamp(18.125rem, 89.3vw, 31.5rem);
+    max-width: clamp(31.5rem, 15.357rem + 33.631vw, 45.625rem);
+
 
     // Tablet Breakpoint
     @media screen and (min-width: 768px) {
         align-items: flex-start;
-        padding: clamp(3rem, 6vw, 4rem);
         margin-top: 10.5rem;
+        padding: clamp(48px, 29.714px + 2.381vw, 64px);
         text-align: left;
-        width: clamp(31.5rem, 65.5vw, 45.625rem);
-    }
-}
-
-.call_to_action__content {
-    display: flex;
-    justify-content: center;
-    margin-top: 7rem;
-    position: relative;
-
-    // Tablet Breakpoint
-    @media screen and (min-width: 768px) {
-        justify-content: flex-end;
-        width: clamp(42.5rem, 88.4vw, 70rem);
     }
 }
 
 .call_to_action__heading {
-    font: 600 clamp(2rem, 8.4vw, 3rem)/120% $font-fraunces;
+    font: 600 clamp(2rem, 1.046rem + 4.071vw, 3rem)/120% $font-fraunces;
 
     // Tablet Breakpoint
     @media screen and (min-width: 768px) {
-        font-size: clamp(3rem, 6.1vw, 3.5rem);
+        font-size: clamp(3rem, 2.429rem + 1.19vw, 3.5rem);
     }
-}
-
-.call_to_action__image {
-    @include square_dimensions(280px);
-    position: absolute;
-
-    // Tablet Breakpoint
-    @media screen and (min-width: 768px) {
-        @include square_dimensions(clamp(280px, 36.3vw, 477px));
-        left: 0;
-    }
-}
-
-.call_to_action__paragraph {
-    font: 1rem/180% $font-manrope;
-
-    // Tablet Breakpoint
-    @media screen and (min-width: 768px) {
-        font-size: clamp(1rem, 1.9vw, 1.125rem);
-    }
-}
-
-#call_to_action__button {
-    z-index: 1;
 }

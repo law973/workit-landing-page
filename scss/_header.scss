@@ -1,0 +1,20 @@
+header {
+    background-color: var(--purple-900);
+}
+
+// This content div contains the header logo and the secondary link
+.header__content {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 90rem;
+    padding: 32px clamp(20px, -2.901px + 6.107vw, 44px) 0;
+
+    // Tablet Breakpoint
+    // The height of the header section and the width of .header__content are responsive via padding
+    @media screen and (min-width: 768px) {
+        padding: clamp(32px, 4.571px + 3.571vw, 56px) clamp(44px, -88.571px + 17.262vw, 160px) 0;
+    }
+}

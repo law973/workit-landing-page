@@ -1,41 +1,37 @@
 .background_pattern {
     opacity: 0;
     position: absolute;
-    transition: opacity 0.3s linear, transform 0.5s;
+    transition: opacity 0.3s linear;
 
     // Tablet Breakpoint
     @media screen and (min-width: 768px) {
         opacity: 1;
     }
-}
 
-#background_pattern_one {
-    height: 317px;
-    left: calc(-341px + clamp(117px, 14vw, 201px));
-    top: clamp(58px, 7.4vw, 106px);
-    width: 341px;
-
-    // Desktop Breakpoint
-    @media screen and (min-width: 1440px) {
-        transform: translate(39px, 32px);
+    // Styling for Background Pattern 1
+    // This pattern is in the hero section
+    &__one {
+        height: 317px;
+        left: clamp(-224px, -392px + 21.875vw, -101px);
+        top: clamp(-9px, -73px + 8.333vw, 47px);
+        width: 341px;
     }
-}
 
-#background_pattern_two {
-    height: 181px;
-    right: calc(-174px + clamp(79px, 10vw, 127px));
-    top: clamp(262px, 33vw, 342px);
-    width: 174px;
-}
+    // Styling for Background Pattern 2
+    // This pattern is in the hero section
+    &__two {
+        height: 181px;
+        right: clamp(-94px, -148.857px + 7.143vw, -46px);
+        top: clamp(195px, 131px + 8.333vw, 251px);
+        width: 174px;
+    }
 
-#background_pattern_three {
-    bottom: calc(-212px + clamp(98px, 12.6vw, 147px));
-    height: 212px;
-    right: clamp(13.71px, 1.6vw, 22.71px);
-    width: 221px;
-
-    // Desktop Breakpoint
-    @media screen and (min-width: 1440px) {
-        transform: translateX(-85px);
+    // Styling for Background Pattern 3
+    // This pattern is in the call-to-action card
+    &__three {
+        bottom: clamp(-113px, -169px + 7.292vw, -64px);
+        height: 212px;
+        right: clamp(14px, -93.429px + 13.988vw, 108px);
+        width: 221px;
     }
 }

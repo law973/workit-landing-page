@@ -1,32 +1,31 @@
-.footer {
+footer {
     align-items: center;
+    background-color: var(--white);
     display: flex;
     flex-direction: column;
     gap: 3.5rem;
-    height: clamp(16.288rem, 33vw, 20.288rem);
-    justify-content: center;
+    padding: clamp(80px, 43.429px + 4.762vw, 112px) 0;
 }
 
-.footer__logo {
-    @extend .workit_logo_dimensions;
-}
-
-.footer__social {
+// Contains Facebook/Twitter/Instagram social links
+.footer__social_links_container {
     display: flex;
     gap: 1.75rem;
 }
 
 .footer__social_link {
-    align-items: center;
-    display: flex;
 
-    .social_icon path {
-        fill: var(--slate-500);
-        transition: fill 0.25s linear;
+    svg {
+        @include equal_height_and_width(20px);
+
+        path {
+            fill: var(--slate-500);
+            transition: fill 0.25s linear;
+        }
     }
 
     &:hover, &:focus {
-        .social_icon path {
+        svg path {
             fill: var(--slate-900);
         }
     }
