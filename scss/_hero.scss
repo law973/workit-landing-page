@@ -20,7 +20,7 @@
     // Tablet Breakpoint
     // The height of the curved border is responsive
     // The height of .hero__content (and by extension .hero) is responsive via margin/padding 
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48rem) {
         @include curved-border-radii(clamp(53px, 35.857px + 2.232vw, 68px));
         margin-bottom: clamp(8.688rem, 6.83rem + 3.869vw, 10.313rem);
         padding-bottom: clamp(197px, 6.143px + 24.851vw, 364px);
@@ -41,7 +41,7 @@
     }
 
     // Tablet Breakpoint
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48rem) {
         font-size: clamp(3.75rem, 2.321rem + 2.976vw, 5rem);
     }
 }
@@ -56,7 +56,7 @@
     max-width: 86vw;
 
     // Tablet Breakpoint
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48rem) {
         width: clamp(515px, 227px + 37.5vw, 767px);
     }
 }

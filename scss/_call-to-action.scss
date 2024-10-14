@@ -15,7 +15,7 @@
 
     // Tablet Breakpoint
     // Change in value of justify-content moves the card to the right of the content div
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48rem) {
         justify-content: flex-end;
         margin: 7rem clamp(2.75rem, -5.536rem + 17.262vw, 10rem) 0;
     }
@@ -28,7 +28,7 @@
 
     // Tablet Breakpoint
     // Change in value of left moves the image to the left of the content div
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48rem) {
         left: 0;
     }
 }
@@ -49,7 +49,7 @@
 
 
     // Tablet Breakpoint
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48rem) {
         align-items: flex-start;
         margin-top: 10.5rem;
         padding: clamp(48px, 29.714px + 2.381vw, 64px);
@@ -61,7 +61,7 @@
     font: 600 clamp(2rem, 1.046rem + 4.071vw, 3rem)/120% $font-fraunces;
 
     // Tablet Breakpoint
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48rem) {
         font-size: clamp(3rem, 2.429rem + 1.19vw, 3.5rem);
     }
 }

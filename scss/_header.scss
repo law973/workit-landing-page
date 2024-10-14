@@ -14,7 +14,7 @@ header {
 
     // Tablet Breakpoint
     // The height of the header section and the width of .header__content are responsive via padding
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48rem) {
         padding: clamp(32px, 4.571px + 3.571vw, 56px) clamp(44px, -88.571px + 17.262vw, 160px) 0;
     }
 }

@@ -14,12 +14,12 @@
     padding: 64px 20px clamp(87px, 44.061px + 11.45vw, 132px);
 
     // Tablet Breakpoint
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48rem) {
         padding: 56px 44px 112px;
     }
 
     // Desktop Breakpoint
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 90rem) {
         padding: 88px 0 212px;
     }
 }
@@ -32,7 +32,7 @@
     padding-left: 0;
 
     // Desktop Breakpoint
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 90rem) {
         flex-direction: row;
     }
 }
@@ -61,7 +61,7 @@
     }
 
     // Tablet Breakpoint
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48rem) {
         flex-direction: row;
         gap: 3.5rem;
         max-width: 59.5rem;
@@ -69,7 +69,7 @@
     }
 
     // Desktop Breakpoint
-    @media screen and (min-width: 1440px) {
+    @media screen and (min-width: 90rem) {
         flex-direction: column;
         text-align: center;
         max-width: 22rem;
@@ -81,7 +81,7 @@
     margin-bottom: clamp(16px, 4.55px + 3.053vw, 28px);
 
     // Tablet Breakpoint
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 48rem) {
         font-size: clamp(1.75rem, 1.464rem + 0.595vw, 2rem);
     }
 }
